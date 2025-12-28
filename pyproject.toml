@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools==75.6.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "boosted-ldpc-torch"
+version = "0.1.0"
+description = "Modular PyTorch boosted neural LDPC decoders"
+requires-python = ">=3.10,<3.13"
+dependencies = ["numpy==2.0.2", "torch==2.5.1"]
+
+[project.optional-dependencies]
+test = ["pytest==8.3.4"]
+reference = ["pytest==8.3.4", "tensorflow==2.18.0"]
+
+[dependency-groups]
+dev = ["pytest==8.3.4"]
+
+[project.scripts]
+ldpc-torch = "ldpc_torch.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["ldpc_torch*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
