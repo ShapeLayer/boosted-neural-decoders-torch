@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "boosted-ldpc-torch"
 version = "0.1.0"
 description = "Modular PyTorch boosted neural LDPC decoders"
-requires-python = ">=3.10,<3.13"
+requires-python = ">=3.10"
 dependencies = ["numpy==2.0.2", "torch==2.5.1"]
 
 [project.optional-dependencies]
